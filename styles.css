@@ -258,3 +258,20 @@ hr { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
   padding-left: 0.65rem; border-left: 3px solid var(--ember);
 }
 .group-sub { color: #a9a9b3; margin: 0 0 1.2rem; max-width: 70ch; }
+
+/* ---------- fresh updates box ---------- */
+.fresh-box {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--ember);
+  border-radius: var(--radius);
+  padding: 1rem 1.3rem;
+  margin: 1.6rem 0;
+}
+.fresh-box h2 {
+  margin: 0 0 0.5rem; font-size: 1.02rem; letter-spacing: 0.05em;
+  text-transform: uppercase; border: none; padding: 0;
+}
+.fresh-box ul { margin: 0; padding: 0; list-style: none; }
+.fresh-box li { margin: 0.35rem 0; font-size: 0.93rem; color: var(--ink-soft); }
+.fresh-box time { color: var(--ember); font-weight: 700; font-size: 0.85rem; white-space: nowrap; }
