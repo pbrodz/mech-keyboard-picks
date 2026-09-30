@@ -241,6 +241,12 @@ hr { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
   border-radius: 8px; text-decoration: none;
 }
 .buy a:hover { color: #141417; filter: brightness(1.12); }
+.buy a.hist {
+  display: inline; background: none; color: var(--muted, #a9a9b3);
+  font-weight: 400; font-size: 0.82rem; padding: 0; border-radius: 0;
+  text-decoration: underline; text-underline-offset: 2px;
+}
+.buy a.hist:hover { color: var(--ember); filter: none; }
 
 .group-label {
   font-size: 1.25rem; margin: 2.4rem 0 0.3rem;
