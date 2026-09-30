@@ -2,14 +2,17 @@
    Blacks and dark greys only. No frameworks, no webfonts. */
 
 :root {
-  --bg: #0d0d0f;
-  --bg-deep: #16161a;
+  --bg: #141417;
+  --bg-deep: #1b1b20;
   --ink: #d6d6da;
   --ink-soft: #9a9aa2;
   --ink-faint: #6e6e76;
-  --accent: #c9c9d2;        /* light grey accent */
+  --accent: #c9c9d2;
+  --ember: #d08a4e;         /* forge ember */
+  --steel: #6aa3d8;          /* steel blue */
+  --copper: #b08050;         /* peasant copper */
   --line: #26262c;
-  --card: #16161a;
+  --card: #1b1b20;
   --radius: 10px;
 }
 
@@ -39,13 +42,13 @@ h2 { font-size: 1.5rem; margin: 2.2rem 0 0.75rem; border-bottom: 2px solid #3a3a
 h3 { font-size: 1.15rem; margin: 1.5rem 0 0.5rem; }
 
 a { color: #e8e8ec; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-a:hover { color: #ffffff; }
+a:hover { color: var(--ember); }
 
-.wrap { max-width: 860px; margin: 0 auto; padding: 0 1.25rem; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
 
 /* ---------- header ---------- */
 .site-header {
-  background: #000000;
+  background: #101013;
   color: var(--ink);
   border-bottom: 1px solid var(--line);
 }
@@ -184,7 +187,7 @@ article.post li { margin-bottom: 0.45rem; }
 /* ---------- footer ---------- */
 .site-footer {
   margin-top: 3rem;
-  background: #000000;
+  background: #101013;
   border-top: 1px solid var(--line);
   color: var(--ink-soft);
   font-size: 0.88rem;
@@ -217,11 +220,16 @@ hr { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
 .pick-recommended { position: relative; border-color: #4a4a55; }
 .dwarf-approved {
   position: absolute; top: -22px; right: 12px; width: 104px; height: 104px;
-  background: #16161a; border: 2px solid #8a8a95; border-radius: 50%;
+  background: #1b1b20; border: 2px solid var(--ember); box-shadow: 0 4px 18px rgba(208,138,78,0.25); border-radius: 50%;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   transform: rotate(8deg); box-shadow: 0 4px 18px rgba(0,0,0,0.6); z-index: 2;
 }
 .dwarf-approved img { width: 52px; height: 52px; border-radius: 50%; }
 .dwarf-approved span { font-size: 0.58rem; font-weight: 800; letter-spacing: 0.08em;
   color: #d6d6da; text-align: center; line-height: 1.25; margin-top: 2px; }
-.gaming-approved { transform: rotate(-8deg); }
+.gaming-approved { transform: rotate(-8deg); border-color: var(--steel); box-shadow: 0 4px 18px rgba(106,163,216,0.25); }
+
+.budget-pick { transform: rotate(5deg); border-color: var(--copper); box-shadow: 0 4px 18px rgba(176,128,80,0.22); }
+.top-picks { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin: 1.6rem 0 0.4rem; }
+.top-picks .pick { margin: 0; }
+@media (max-width: 780px) { .top-picks { grid-template-columns: 1fr; } }
