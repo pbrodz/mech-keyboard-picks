@@ -248,6 +248,11 @@ hr { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
 }
 .buy a.hist:hover { color: var(--ember); filter: none; }
 
+.tagline {
+  font-style: italic; font-size: 1.05rem; color: var(--ember);
+  margin: 0.9rem 0 0.2rem; line-height: 1.45;
+}
+
 .group-label {
   font-size: 1.25rem; margin: 2.4rem 0 0.3rem;
   padding-left: 0.65rem; border-left: 3px solid var(--ember);
