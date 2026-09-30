@@ -1,0 +1,181 @@
+/* mech-keyboard-picks — a warm, print-inspired theme.
+   Paper background, ink text, forest-green accents. No frameworks, no webfonts. */
+
+:root {
+  --paper: #faf5ea;
+  --paper-deep: #f3ecdb;
+  --ink: #2b2620;
+  --ink-soft: #5c554a;
+  --accent: #2f5d3a;        /* forest green */
+  --accent-dark: #23452b;
+  --highlight: #d9a441;     /* amber */
+  --line: #ddd2bd;
+  --card: #fffdf7;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+h1 { font-size: 2.1rem; margin: 0 0 0.5rem; }
+h2 { font-size: 1.5rem; margin: 2.2rem 0 0.75rem; border-bottom: 2px solid var(--highlight); padding-bottom: 0.3rem; }
+h3 { font-size: 1.15rem; margin: 1.5rem 0 0.5rem; }
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--accent-dark); }
+
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 1.25rem; }
+
+/* ---------- header ---------- */
+.site-header {
+  background: var(--accent-dark);
+  color: #f5efdf;
+  border-bottom: 4px solid var(--highlight);
+}
+.site-header .wrap { padding-top: 1.4rem; padding-bottom: 1.4rem; }
+.brand {
+  font-family: Georgia, serif;
+  font-size: 1.6rem;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+.brand small { display: block; font-family: inherit; font-size: 0.85rem; color: var(--highlight); letter-spacing: 1px; }
+.nav { margin-top: 0.9rem; display: flex; gap: 1.4rem; flex-wrap: wrap; }
+.nav a { color: #f5efdf; text-decoration: none; font-size: 0.95rem; }
+.nav a:hover { color: var(--highlight); text-decoration: underline; }
+
+/* ---------- hero ---------- */
+.hero {
+  background: var(--paper-deep);
+  border-bottom: 1px solid var(--line);
+  padding: 2.2rem 0 1.8rem;
+}
+.hero p.lede { font-size: 1.1rem; color: var(--ink-soft); max-width: 60ch; }
+.updated {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.25rem 0.9rem;
+  color: var(--ink-soft);
+}
+.updated strong { color: var(--accent); }
+
+/* ---------- pick cards ---------- */
+.pick {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.5rem;
+  margin: 1.4rem 0;
+  position: relative;
+}
+.pick .badge {
+  position: absolute;
+  top: -0.85rem;
+  left: 1.2rem;
+  background: var(--highlight);
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+}
+.pick h3 { margin-top: 0.4rem; font-size: 1.35rem; }
+.pick h3 .price { font-family: inherit; font-size: 1rem; color: var(--ink-soft); font-weight: normal; }
+.specs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5rem 1.2rem;
+  margin: 0.9rem 0;
+  font-size: 0.92rem;
+}
+.specs div { background: var(--paper); border-radius: 6px; padding: 0.45rem 0.7rem; }
+.specs dt, .specs .k { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.6px; color: var(--ink-soft); }
+.specs dd, .specs .v { margin: 0; font-weight: 600; }
+.pick p { margin: 0.6rem 0; }
+.fineprint { font-size: 0.85rem; color: var(--ink-soft); font-style: italic; }
+
+/* ---------- comparison table ---------- */
+.table-scroll { overflow-x: auto; margin: 1.2rem 0; border: 1px solid var(--line); border-radius: var(--radius); }
+table { border-collapse: collapse; width: 100%; min-width: 640px; background: var(--card); font-size: 0.93rem; }
+th, td { text-align: left; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { background: var(--accent); color: #fff; font-family: Georgia, serif; font-weight: normal; font-size: 0.95rem; }
+tr:last-child td { border-bottom: none; }
+tbody tr:nth-child(even) td { background: #faf6ec; }
+
+/* ---------- blog ---------- */
+.post-list { list-style: none; padding: 0; margin: 1.2rem 0; }
+.post-list li {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.3rem;
+  margin-bottom: 1rem;
+}
+.post-list h3 { margin: 0 0 0.3rem; font-size: 1.25rem; }
+.post-list time { font-size: 0.82rem; color: var(--ink-soft); }
+.post-list p { margin: 0.5rem 0 0; color: var(--ink-soft); }
+
+article.post time { font-size: 0.85rem; color: var(--ink-soft); }
+article.post .disclaimer {
+  background: var(--paper-deep);
+  border-left: 4px solid var(--highlight);
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.4rem 0;
+}
+article.post ul { padding-left: 1.3rem; }
+article.post li { margin-bottom: 0.45rem; }
+
+/* ---------- footer ---------- */
+.site-footer {
+  margin-top: 3rem;
+  background: var(--accent-dark);
+  color: #d9d2c0;
+  font-size: 0.88rem;
+}
+.site-footer .wrap { padding-top: 1.6rem; padding-bottom: 1.6rem; }
+.site-footer a { color: var(--highlight); }
+.site-footer p { margin: 0.4rem 0; }
+
+/* ---------- misc ---------- */
+.cta-box {
+  background: var(--accent);
+  color: #f5efdf;
+  border-radius: var(--radius);
+  padding: 1.3rem 1.5rem;
+  margin: 2rem 0;
+}
+.cta-box h2 { color: #fff; border: none; margin-top: 0; padding: 0; }
+.cta-box a { color: var(--highlight); }
+
+hr { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  h1 { font-size: 1.7rem; }
+  .pick { padding: 1.1rem; }
+}
