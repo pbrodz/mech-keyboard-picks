@@ -1,4 +1,4 @@
-# Keywell &amp; Co. — Ergonomic Mechanical Keyboards for Programmers
+# ERGOBOARD — Ergonomic Mechanical Keyboards for Programmers
 
 A static niche comparison site: current top picks + a blog, built to test whether
 a focused site can earn Google traffic. Pure HTML/CSS, no build step, hosted on
