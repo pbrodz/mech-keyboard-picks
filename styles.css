@@ -224,3 +224,4 @@ hr { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
 .dwarf-approved img { width: 52px; height: 52px; border-radius: 50%; }
 .dwarf-approved span { font-size: 0.58rem; font-weight: 800; letter-spacing: 0.08em;
   color: #d6d6da; text-align: center; line-height: 1.25; margin-top: 2px; }
+.gaming-approved { transform: rotate(-8deg); }
