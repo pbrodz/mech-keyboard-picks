@@ -230,9 +230,9 @@ hr { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
 .gaming-approved { transform: rotate(-8deg); border-color: var(--steel); box-shadow: 0 4px 18px rgba(106,163,216,0.25); }
 
 .budget-pick { transform: rotate(5deg); border-color: var(--copper); box-shadow: 0 4px 18px rgba(176,128,80,0.22); }
-.top-picks { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin: 1.6rem 0 0.4rem; }
-.top-picks .pick { margin: 0; }
-@media (max-width: 780px) { .top-picks { grid-template-columns: 1fr; } }
+.pick-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin: 1.6rem 0 0.4rem; }
+.pick-grid .pick { margin: 0; }
+@media (max-width: 780px) { .pick-grid { grid-template-columns: 1fr; } }
 
 .buy { margin-top: 1.1rem; }
 .buy a {
@@ -241,3 +241,9 @@ hr { border: none; border-top: 1px solid var(--line); margin: 2rem 0; }
   border-radius: 8px; text-decoration: none;
 }
 .buy a:hover { color: #141417; filter: brightness(1.12); }
+
+.group-label {
+  font-size: 1.25rem; margin: 2.4rem 0 0.3rem;
+  padding-left: 0.65rem; border-left: 3px solid var(--ember);
+}
+.group-sub { color: #a9a9b3; margin: 0 0 1.2rem; max-width: 70ch; }
